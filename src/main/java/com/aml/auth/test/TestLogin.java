@@ -1,9 +1,9 @@
-package com.aml.auth.model;
+package com.aml.auth.test;
 
 import lombok.Data;
 
 @Data
-public class Login {
+public class TestLogin {
     private String username;
     private String password;
 }
