@@ -1,4 +1,4 @@
-package com.aml.auth.infra.business;
+package com.aml.infra.business;
 
 public class LoginInvalidoException extends BusinessException {
     public LoginInvalidoException() {

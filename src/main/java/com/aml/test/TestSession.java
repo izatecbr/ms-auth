@@ -1,4 +1,4 @@
-package com.aml.auth.test;
+package com.aml.test;
 
 import lombok.Data;
 

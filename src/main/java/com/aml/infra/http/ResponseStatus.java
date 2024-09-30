@@ -1,4 +1,4 @@
-package com.aml.auth.infra.http;
+package com.aml.infra.http;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;

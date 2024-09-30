@@ -1,4 +1,4 @@
-package com.aml.auth.infra.http;
+package com.aml.infra.http;
 
 import org.springframework.http.HttpStatus;
 

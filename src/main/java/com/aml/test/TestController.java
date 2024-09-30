@@ -1,7 +1,7 @@
-package com.aml.auth.test;
+package com.aml.test;
 
-import com.aml.auth.infra.http.Response;
-import com.aml.auth.infra.http.ResponseFactory;
+import com.aml.infra.http.Response;
+import com.aml.infra.http.ResponseFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

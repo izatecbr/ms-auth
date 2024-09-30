@@ -1,6 +1,6 @@
-package com.aml.auth.test;
+package com.aml.test;
 
-import com.aml.auth.infra.business.LoginInvalidoException;
+import com.aml.infra.business.LoginInvalidoException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

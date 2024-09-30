@@ -1,7 +1,7 @@
-package com.aml.auth.infra.business;
+package com.aml.infra.business;
 
-import com.aml.auth.infra.http.Response;
-import com.aml.auth.infra.http.ResponseFactory;
+import com.aml.infra.http.Response;
+import com.aml.infra.http.ResponseFactory;
 import org.springframework.cglib.proxy.UndeclaredThrowableException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
