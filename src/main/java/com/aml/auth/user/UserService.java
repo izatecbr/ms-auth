@@ -1,11 +1,11 @@
-package com.aml.auth.feature;
+package com.aml.auth.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FeatureService {
+public class UserService {
     @Autowired
-    private FeatureRepository repository;
+    private UserRepository repository;
     public void save(){}
 }

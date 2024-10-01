@@ -33,14 +33,24 @@ INSERT INTO public.tab_profile (id, description, "label") VALUES('OPE', 'Operato
 
 
 
-CREATE TABLE public.tab_access_role (
+CREATE TABLE public.tab_profile_role (
 	id serial not null,
 	role varchar(16) NOT NULL,
 	profile varchar(5) NULL,
 	CONSTRAINT tab_access_role_pkey PRIMARY KEY (id)
 );
 
-INSERT INTO public.tab_access_role (profile, role) VALUES('MNG','CTM_FULL');
-INSERT INTO public.tab_access_role (profile, role) VALUES('OPE','CTM_SELECT');
-INSERT INTO public.tab_access_role (profile, role) VALUES('OPE','CTM_PRINT');
+INSERT INTO public.tab_profile_role (profile, role) VALUES('MNG','CTM_FULL');
+INSERT INTO public.tab_profile_role (profile, role) VALUES('OPE','CTM_SELECT');
+INSERT INTO public.tab_profile_role (profile, role) VALUES('OPE','CTM_PRINT');
+
+CREATE TABLE public.tab_user (
+	login varchar(10) NOT NULL,
+	password varchar(50) NULL,
+	profile varchar(5) NULL,
+	CONSTRAINT tab_user_pkey PRIMARY KEY (login)
+);
+
+INSERT INTO public.tab_user (login, password, profile) VALUES('mng','123','MNG');
+INSERT INTO public.tab_user (login, password, profile) VALUES('ope','456','OPE');
 
