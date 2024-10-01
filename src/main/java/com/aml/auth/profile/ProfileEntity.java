@@ -1,9 +1,9 @@
 package com.aml.auth.profile;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tab_profile")
@@ -13,4 +13,10 @@ public class ProfileEntity {
     private String id;
     private String label;
     private String description;
+    @ElementCollection
+    @CollectionTable(schema = "public", name="tab_profile_role",
+            joinColumns=@JoinColumn(name="profile")
+    )
+    @Column(name = "role")
+    private List<String> roles;
 }

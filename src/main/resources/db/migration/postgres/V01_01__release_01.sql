@@ -41,8 +41,11 @@ CREATE TABLE public.tab_profile_role (
 );
 
 INSERT INTO public.tab_profile_role (profile, role) VALUES('MNG','CTM_FULL');
+INSERT INTO public.tab_profile_role (profile, role) VALUES('MNG','PDC_FULL');
 INSERT INTO public.tab_profile_role (profile, role) VALUES('OPE','CTM_SELECT');
 INSERT INTO public.tab_profile_role (profile, role) VALUES('OPE','CTM_PRINT');
+INSERT INTO public.tab_profile_role (profile, role) VALUES('OPE','PDC_INSERT');
+INSERT INTO public.tab_profile_role (profile, role) VALUES('OPE','PDC_UPDATE');
 
 CREATE TABLE public.tab_user (
 	login varchar(10) NOT NULL,
