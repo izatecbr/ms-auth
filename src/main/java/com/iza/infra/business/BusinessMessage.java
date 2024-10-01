@@ -1,4 +1,4 @@
-package com.aml.infra.business;
+package com.iza.infra.business;
 
 import org.springframework.http.HttpStatus;
 

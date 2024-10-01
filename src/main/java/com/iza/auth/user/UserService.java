@@ -1,8 +1,8 @@
-package com.aml.auth.user;
+package com.iza.auth.user;
 
-import com.aml.auth.Session;
-import com.aml.auth.profile.ProfileEntity;
-import com.aml.auth.profile.ProfileRepository;
+import com.iza.auth.Session;
+import com.iza.auth.profile.ProfileEntity;
+import com.iza.auth.profile.ProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

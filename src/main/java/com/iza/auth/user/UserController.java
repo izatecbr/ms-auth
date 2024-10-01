@@ -1,9 +1,9 @@
-package com.aml.auth.user;
+package com.iza.auth.user;
 
-import com.aml.auth.Session;
-import com.aml.infra.http.Response;
-import com.aml.infra.http.ResponseFactory;
-import com.aml.test.TestLogin;
+import com.iza.auth.Session;
+import com.iza.infra.http.Response;
+import com.iza.infra.http.ResponseFactory;
+import com.iza.test.TestLogin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

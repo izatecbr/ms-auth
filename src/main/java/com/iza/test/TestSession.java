@@ -1,4 +1,4 @@
-package com.aml.test;
+package com.iza.test;
 
 import lombok.Data;
 

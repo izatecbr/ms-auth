@@ -1,4 +1,4 @@
-package com.aml.auth.user;
+package com.iza.auth.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,4 +1,4 @@
-package com.aml.auth;
+package com.iza.auth;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.aml.auth.user;
+package com.iza.auth.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -12,5 +12,5 @@ public class UserEntity {
     @Id
     private String login;
     private String password;
-    private String profile;
+    private Integer profile;
 }

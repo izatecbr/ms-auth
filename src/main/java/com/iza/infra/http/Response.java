@@ -1,4 +1,4 @@
-package com.aml.infra.http;
+package com.iza.infra.http;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;

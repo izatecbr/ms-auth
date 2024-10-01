@@ -1,4 +1,4 @@
-package com.aml.infra.business;
+package com.iza.infra.business;
 
 public class BusinessException extends  RuntimeException{
     private String errorCode;

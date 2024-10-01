@@ -1,7 +1,9 @@
-package com.aml.auth.profile;
+package com.iza.auth.profile;
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -10,7 +12,9 @@ import java.util.List;
 @Data
 public class ProfileEntity {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.NONE)
+    private Integer id;
     private String label;
     private String description;
     @ElementCollection

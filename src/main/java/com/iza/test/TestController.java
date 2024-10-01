@@ -1,7 +1,7 @@
-package com.aml.test;
+package com.iza.test;
 
-import com.aml.infra.http.Response;
-import com.aml.infra.http.ResponseFactory;
+import com.iza.infra.http.Response;
+import com.iza.infra.http.ResponseFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
