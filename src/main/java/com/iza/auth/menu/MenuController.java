@@ -13,7 +13,7 @@ public class MenuController {
     @Autowired
     private MenuService service;
     @GetMapping
-    public List<MenuEntity> menus(){
+    public List<MenuResponse> menus(){
         return service.menu();
     }
 }

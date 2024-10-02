@@ -13,11 +13,11 @@ import java.util.stream.Collectors;
 public class MenuService {
     @Autowired
     private MenuRepository repository;
-    public List<MenuEntity> menu(){
-        List<MenuEntity> list = repository.findAllByOrderByLevelAsc();
-        Map<Integer, MenuEntity> map = list.stream().collect(Collectors.toMap(MenuEntity::getId, Function.identity()));
-        Map<Integer, MenuEntity> treeMenu= new LinkedHashMap<>();
-        for(MenuEntity menu:list){
+    public List<MenuResponse> menu(){
+        List<MenuResponse> list = repository.getMenus();
+        Map<Integer, MenuResponse> map = list.stream().collect(Collectors.toMap(MenuResponse::getId, Function.identity()));
+        Map<Integer, MenuResponse> treeMenu= new LinkedHashMap<>();
+        for(MenuResponse menu:list){
             if(menu.getParent()==null)
                 treeMenu.put(menu.getId(), menu);
             else{

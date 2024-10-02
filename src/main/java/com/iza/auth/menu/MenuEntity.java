@@ -20,10 +20,5 @@ public class MenuEntity {
     private String level;
     private String role;
     private Integer parent;
-    @Transient
-    private List<MenuEntity> menus = new ArrayList();
 
-    public void add(MenuEntity menu){
-        menus.add(menu);
-    }
 }
