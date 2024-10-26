@@ -9,7 +9,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static com.iza.modules.Entitys.PRODUCT;
 
@@ -43,6 +45,13 @@ public class ProductService {
         return convert(findEntity(id));
     }
 
+    //aplicar a paginação com base nos filtros necessários
+    public List<ProductResponse> search(){
+        List<ProductResponse> response = repository.findAll()
+                .stream().map(this::convert).collect(Collectors.toList());
+
+        return response;
+    }
     private ProductEntity findEntity(Integer id){
         return repository.findById(id).orElseThrow(()-> new RecordNotFoundException(PRODUCT.getName(), id));
     }

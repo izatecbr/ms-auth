@@ -1,6 +1,6 @@
 package com.iza.modules.access.user;
 
-import com.iza.modules.access.Session;
+import com.iza.core.Session;
 import com.iza.modules.access.profile.ProfileEntity;
 import com.iza.modules.access.profile.ProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;

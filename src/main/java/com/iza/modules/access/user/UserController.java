@@ -1,6 +1,6 @@
 package com.iza.modules.access.user;
 
-import com.iza.modules.access.Session;
+import com.iza.core.Session;
 import com.iza.core.infra.http.Response;
 import com.iza.core.infra.http.ResponseFactory;
 import com.iza.test.TestLogin;

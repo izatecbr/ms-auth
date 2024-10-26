@@ -1,4 +1,4 @@
-package com.iza.modules.access;
+package com.iza.core;
 
 public enum Operation {
     INSERT,//POST
