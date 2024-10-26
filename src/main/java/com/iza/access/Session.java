@@ -1,4 +1,4 @@
-package com.iza.auth;
+package com.iza.access;
 
 import lombok.Data;
 

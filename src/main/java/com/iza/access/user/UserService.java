@@ -1,8 +1,8 @@
-package com.iza.auth.user;
+package com.iza.access.user;
 
-import com.iza.auth.Session;
-import com.iza.auth.profile.ProfileEntity;
-import com.iza.auth.profile.ProfileRepository;
+import com.iza.access.Session;
+import com.iza.access.profile.ProfileEntity;
+import com.iza.access.profile.ProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

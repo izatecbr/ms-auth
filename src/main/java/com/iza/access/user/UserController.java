@@ -1,6 +1,6 @@
-package com.iza.auth.user;
+package com.iza.access.user;
 
-import com.iza.auth.Session;
+import com.iza.access.Session;
 import com.iza.infra.http.Response;
 import com.iza.infra.http.ResponseFactory;
 import com.iza.test.TestLogin;

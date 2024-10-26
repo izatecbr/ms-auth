@@ -1,4 +1,4 @@
-package com.iza.auth.menu;
+package com.iza.access.menu;
 
 import java.util.ArrayList;
 import java.util.List;

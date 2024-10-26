@@ -1,4 +1,4 @@
-package com.iza.auth.profile;
+package com.iza.access.profile;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

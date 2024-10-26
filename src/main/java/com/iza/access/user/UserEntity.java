@@ -1,4 +1,4 @@
-package com.iza.auth.user;
+package com.iza.access.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

@@ -1,4 +1,4 @@
-package com.iza.auth;
+package com.iza.access;
 
 public enum Functionality {
     CUSTOMERS("CUSTOMERS","Cadastro de clientes"),

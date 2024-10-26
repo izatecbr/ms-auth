@@ -1,4 +1,4 @@
-package com.iza.auth.profile;
+package com.iza.access.profile;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

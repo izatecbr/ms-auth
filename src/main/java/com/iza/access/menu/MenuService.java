@@ -1,4 +1,4 @@
-package com.iza.auth.menu;
+package com.iza.access.menu;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

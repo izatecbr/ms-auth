@@ -1,12 +1,9 @@
-package com.iza.auth.menu;
+package com.iza.access.menu;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.Setter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "tab_menu")
