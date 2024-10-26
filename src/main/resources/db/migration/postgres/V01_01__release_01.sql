@@ -1,27 +1,28 @@
 CREATE TABLE public.tab_profile (
-	id varchar(25) NULL,
+    id serial NOT NULL,
+    name varchar(25) NULL,
 	label varchar(50) NULL,
 	description varchar(100) NULL,
 	CONSTRAINT pk_profile PRIMARY KEY (id)
 );
 
-INSERT INTO public.tab_profile (id, "label", description) VALUES('MANAGER','Perfil Gerente', 'Acesso as funcionalidades administrativas doo sistema', );
-INSERT INTO public.tab_profile (id, "label", description) VALUES('FORMALIZATION', 'Perfil Formalização', 'Acesso as funcionalidades de cadastros do sistema', );
+INSERT INTO public.tab_profile (name, "label", description) VALUES('MANAGER','Perfil Gerente', 'Acesso as funcionalidades administrativas doo sistema');
+INSERT INTO public.tab_profile (name, "label", description) VALUES('FORMALIZATION', 'Perfil Formalização', 'Acesso as funcionalidades de cadastros do sistema');
 
 CREATE TABLE public.tab_profile_role (
     id serial NOT NULL,
 	role varchar(16) NOT NULL,
-	profile int NOT NULL,
+	profile_id integer NOT NULL,
 	CONSTRAINT pk_profile_role PRIMARY KEY (id)
 );
 --role é a composição dos enums: Functionality_Operation
-INSERT INTO public.tab_profile_role (role,profile) VALUES('USERS_MENU','MANAGER');
-INSERT INTO public.tab_profile_role (role,profile) VALUES('USERS_FULL','MANAGER');
-INSERT INTO public.tab_profile_role (role,profile) VALUES('CUSTOMERS_MENU','MANAGER');
-INSERT INTO public.tab_profile_role (role,profile) VALUES('CUSTOMERS_SELECT','MANAGER');
+INSERT INTO public.tab_profile_role (role,profile_id) VALUES('USERS_MENU',1); --'MANAGER'
+INSERT INTO public.tab_profile_role (role,profile_id) VALUES('USERS_FULL',1);
+INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_MENU',1);
+INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_SELECT',1);
 
-INSERT INTO public.tab_profile_role (role,profile) VALUES('CUSTOMERS_MENU','FORMALIZATION');
-INSERT INTO public.tab_profile_role (role,profile) VALUES('CUSTOMERS_FULL','FORMALIZATION');
+INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_MENU',2); --'FORMALIZATION'
+INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_FULL',2);
 
 --INSERT INTO public.tab_profile_role (role,profile) VALUES('PRODUCTS_MENU','FORMALIZATION');
 --INSERT INTO public.tab_profile_role (role,profile) VALUES('PRODUCTS_FULL','FORMALIZATION');
@@ -30,12 +31,12 @@ INSERT INTO public.tab_profile_role (role,profile) VALUES('CUSTOMERS_FULL','FORM
 CREATE TABLE public.tab_user (
 	login varchar(10) NOT NULL,
 	password varchar(50) NULL,
-	profile varchar(5) NULL,
+	profile_id varchar(5) NULL,
 	CONSTRAINT pk_user PRIMARY KEY (login)
 );
 
-INSERT INTO public.tab_user (login, password, profile) VALUES('gleyson','IzaTec@2024','MANAGER');
-INSERT INTO public.tab_user (login, password, profile) VALUES('izabelly','IzaTec@2024','FORMALIZATION');
+INSERT INTO public.tab_user (login, password, profile_id) VALUES('gleyson','IzaTec@2024',1); --'MANAGER'
+INSERT INTO public.tab_user (login, password, profile_id) VALUES('izabelly','IzaTec@2024',2);--'FORMALIZATION'
 
 CREATE TABLE public.tab_menu (
 	id serial not null,
