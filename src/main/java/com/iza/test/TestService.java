@@ -1,6 +1,6 @@
 package com.iza.test;
 
-import com.iza.infra.business.LoginInvalidoException;
+import com.iza.core.infra.business.LoginInvalidoException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
