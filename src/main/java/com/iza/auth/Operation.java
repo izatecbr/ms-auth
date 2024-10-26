@@ -10,7 +10,7 @@ public enum Operation {
     DELETE, //DELETE
     PRINT, //PRINT view/download
     EXPORT,//EXPORT csv/xls/doc
-    VIEW, //VIEW readonly
+    VIEW, //VIEW readonly without SEARCH resource
     MENU, //GET Menu hierarchy
     FULL, //FULL access operation
 }
