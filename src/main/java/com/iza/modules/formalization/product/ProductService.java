@@ -1,5 +1,6 @@
 package com.iza.modules.formalization.product;
 
+import com.iza.core.infra.business.exceptions.RecordIdentificationNotFoundException;
 import com.iza.modules.formalization.product.domain.ProductEntity;
 import com.iza.modules.formalization.product.domain.ProductRequest;
 import com.iza.modules.formalization.product.domain.ProductResponse;
@@ -52,9 +53,11 @@ public class ProductService {
 
         return response;
     }
+
     private ProductEntity findEntity(Integer id){
-        return repository.findById(id).orElseThrow(()-> new RecordNotFoundException(PRODUCT.getName(), id));
+        return repository.findById(id).orElseThrow(()-> new RecordIdentificationNotFoundException(PRODUCT.getName(), id));
     }
+
     //voce escolhar outras formas de converter entity para dto
     private ProductResponse convert(ProductEntity entity){
         ProductResponse response = new ProductResponse();
