@@ -1,13 +1,14 @@
-package com.iza.formalization.customer;
+package com.iza.formalization.product.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.Setter;
+
 @Entity
-@Table(name = "tab_customer")
+@Table(name = "tab_product")
 @Data
-public class CustomerEntity {
+public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)

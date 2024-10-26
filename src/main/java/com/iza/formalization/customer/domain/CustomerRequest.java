@@ -1,4 +1,4 @@
-package com.iza.formalization.customer;
+package com.iza.formalization.customer.domain;
 
 import lombok.Data;
 
