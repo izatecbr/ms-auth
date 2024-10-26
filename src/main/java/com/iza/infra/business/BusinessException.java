@@ -41,7 +41,7 @@ public class BusinessException extends  RuntimeException{
     public static String errorMessage(String mensagem, Object ... params){
         return "#ERRO: " + String.format(mensagem, params);
     }
-    public static String mensagemErroPersistencia(String entidade, Object identificacao){
+    public static String persistenceErrorMessage(String entidade, Object identificacao){
         return errorMessage("Não foi possível incluir ou alterar o(a) [%s] | [ %s ]", entidade, identificacao);
     }
 }

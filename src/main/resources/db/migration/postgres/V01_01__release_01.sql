@@ -1,3 +1,13 @@
+INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('-', '00', NULL, NULL);
+INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Dashboard', '00.01', 'DASH', 1);
+INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Perfis de Risco', '00.02', NULL, 1);
+INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Clientes', '00.02.01', 'CLI', 3);
+INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Produtos', '00.02.02', 'PRD', 3);
+INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('-', '01', NULL, NULL);
+INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Configurações', '01.01', NULL, 6);
+INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Painel de Controle', '01.01.01', 'PCT', 7);
+INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Gestão de Acessos', '01.01.02', 'GCS', 7);
+
 CREATE TABLE public.tab_profile (
 	id serial NOT NULL,
 	alias varchar(50) NULL,
@@ -6,10 +16,8 @@ CREATE TABLE public.tab_profile (
 	CONSTRAINT tab_profile_pkey PRIMARY KEY (id)
 );
 
-INSERT INTO public.tab_profile (alias, description, "label") VALUES('MNG', 'Manager', 'Manager');
-INSERT INTO public.tab_profile (alias, description, "label") VALUES('OPE', 'Operator', 'Operator');
-
---tab_role para detalhar as permissoes?
+INSERT INTO public.tab_profile (alias, description, "label") VALUES('MANAGER', 'Acesso as funcionalidades administrativas doo sistema', 'Perfil Gerente');
+INSERT INTO public.tab_profile (alias, description, "label") VALUES('FORMALIZATION', 'Acesso as funcionalidades de cadastros do sistema', 'Perfil Formalização');
 
 CREATE TABLE public.tab_profile_role (
 	id serial not null,
@@ -17,7 +25,7 @@ CREATE TABLE public.tab_profile_role (
 	profile int NOT NULL,
 	CONSTRAINT tab_access_role_pkey PRIMARY KEY (id)
 );
-INSERT INTO public.tab_profile_role (profile, role) VALUES(1,'CTM_MENU');
+INSERT INTO public.tab_profile_role (profile, role) VALUES(1,'GER_MENU');
 INSERT INTO public.tab_profile_role (profile, role) VALUES(1,'CTM_FULL');
 INSERT INTO public.tab_profile_role (profile, role) VALUES(1,'PDC_MENU');
 INSERT INTO public.tab_profile_role (profile, role) VALUES(1,'PDC_FULL');
@@ -46,14 +54,5 @@ CREATE TABLE public.tab_menu (
 	CONSTRAINT tab_access_menu PRIMARY KEY (id)
 );
 
-INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('-', '00', NULL, NULL);
-INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Dashboard', '00.01', 'DASH', 1);
-INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Perfis de Risco', '00.02', NULL, 1);
-INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Clientes', '00.02.01', 'CLI', 3);
-INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Produtos', '00.02.02', 'PRD', 3);
-INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('-', '01', NULL, NULL);
-INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Configurações', '01.01', NULL, 6);
-INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Painel de Controle', '01.01.01', 'PCT', 7);
-INSERT INTO public.tab_menu ("label", "level", "role", parent) VALUES('Gestão de Acessos', '01.01.02', 'GCS', 7);
 
 
