@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 
 public enum BusinessMessage {
     E100("100", "O campo %s é de preenchimento obrigatório","Preencha o campo de acordo com as instruções"),
-    E101("101", "Não existe um(a) %s com o ID %s informado(a)","O registro deve existir previamente"),
+    E101("101", "Não existe um(a) %s com o ID: %s informado","O registro deve existir previamente"),
 
     E404("404", "Não existe um(a) %s com o(a) %s informado(a)","O registro deve existir previamente"){
         @Override
